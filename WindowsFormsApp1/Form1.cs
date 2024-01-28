@@ -19,10 +19,62 @@ namespace WindowsFormsApp1
 
         private void ButtonSum_Click(object sender, EventArgs e)
         {
-            int a, b;
-            a = int.Parse(textBox1.Text);
-            b = int.Parse(textBox2.Text);
-            textBox3.Text = (a + b).ToString();
+            try
+            {
+                int a, b;
+                a = 0;
+                if (textBox1.Text != "")
+                    a = int.Parse(textBox1.Text);
+
+                b = 0;
+                if (textBox2.Text != "")
+                    b = int.Parse(textBox2.Text);
+                textBox3.Text = (a + b).ToString();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+            
+        }
+
+        private void textBox1_TextChanged(object sender, EventArgs e)
+        {
+            try
+            {
+                int a, b;
+                a = 0;
+                if (textBox1.Text != "")
+                    a = int.Parse(textBox1.Text);
+
+                b = 0;
+                if (textBox2.Text != "")
+                    b = int.Parse(textBox2.Text);
+
+                textBox3.Text = (a + b).ToString();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+        }
+
+        private void textBox2_TextChanged(object sender, EventArgs e)
+        {
+            try
+            {
+                int a=0, b=0;
+                if(textBox1.Text!="")
+                    a = int.Parse(textBox1.Text);
+
+                if(textBox2.Text!="")
+
+            }
+            catch (Exception)
+            {
+
+                throw;
+            }
         }
     }
 }
