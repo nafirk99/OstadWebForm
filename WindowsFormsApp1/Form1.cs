@@ -55,7 +55,8 @@ namespace WindowsFormsApp1
             }
             catch (Exception ex)
             {
-                MessageBox.Show(ex.Message);
+                textBox1.Text = "";
+                //MessageBox.Show(ex.Message);
             }
         }
 
@@ -67,13 +68,15 @@ namespace WindowsFormsApp1
                 if(textBox1.Text!="")
                     a = int.Parse(textBox1.Text);
 
-                if(textBox2.Text!="")
+                if (textBox2.Text != "")
+                    b = int.Parse(textBox2.Text);
 
+                textBox3.Text= (a + b).ToString();
             }
-            catch (Exception)
+            catch (Exception ex)
             {
-
-                throw;
+                textBox2.Text = "";
+                //MessageBox.Show(ex.Message);
             }
         }
     }
